@@ -1,0 +1,32 @@
+﻿<Window x:Class="Telefonszamok_Alap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Telefonszamok_Alap"
+        mc:Ignorable="d"
+        Title="Telefonszám nyílvántartó" Height="450" Width="800">
+    <StackPanel>
+        <!--MENÜSOR-->
+        <Menu>
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Mentés" x:Name="miMentes" Click="miMentes_Click"/>
+                <Separator/>
+                <MenuItem Header="Kilépés" x:Name="miKilepes" Click="miKilepes_Click"/>
+            </MenuItem>
+            <MenuItem Header="Lekérdezés">
+                <MenuItem Header="Minden adat táblázatosan" x:Name="miMindenAdat" Click="miMindenAdat_Click"/>
+                <MenuItem Header="Helységek" x:Name="miHelysegek" Click="miHelysegek_Click"/>
+            </MenuItem>
+            <MenuItem Header="Adatfelvitel/Módosítás">
+                <MenuItem Header="Helységek" x:Name="miHelysegekModositas" Click="miHelysegekModositas_Click"/>
+            </MenuItem>
+        </Menu>
+        <!--ADATRÁCS-->
+        <DataGrid x:Name="dgAdatracs" ItemsSource="{Binding}" Visibility="Hidden"/>
+        <Grid x:Name="grRacs" Visibility="Hidden">
+            
+        </Grid>
+        
+    </StackPanel>
+</Window>
