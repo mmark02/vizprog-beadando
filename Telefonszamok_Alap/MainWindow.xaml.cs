@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using cnTelefonkonyv;
+using Telefonszamok_Alap.Models;
 
 namespace Telefonszamok_Alap;
 
@@ -46,7 +47,24 @@ public partial class MainWindow : Window
         dgAdatracs.Visibility = Visibility.Visible;
         grRacs.Visibility = Visibility.Hidden;
 
-        
+        var mindenAdat = (from s in _context.enSzemelyek
+                          join h in _context.enHelysegek on s.enHelysegid equals h.id
+                          join t in _context.enTelefonszamok on s.id equals t.enSzemelyid into szemelyTelefonszamok
+                          select new
+                          {
+                              Szemely = s,
+                              Helyseg = h,
+                              Telefonszamok = szemelyTelefonszamok
+                          }).ToList().Select(x => new SzemelyesAdatok
+                          {
+                              Vezeteknev = x.Szemely.Vezeteknev,
+                              Utonev = x.Szemely.Utonev,
+                              Irsz = x.Helyseg.IRSZ,
+                              Lakcim = x.Szemely.Lakcim,
+                              Helysegnev = x.Helyseg.Nev,
+                              Telefonszamok = string.Join(", ", x.Telefonszamok.Select(t => t.Szam))
+                          }).ToList();
+        dgAdatracs.ItemsSource = mindenAdat;
     }
 
     private void miHelysegek_Click(object sender, RoutedEventArgs e)

@@ -22,7 +22,7 @@
                 <MenuItem Header="Helységek" x:Name="miHelysegekModositas" Click="miHelysegekModositas_Click"/>
             </MenuItem>
         </Menu>
-        <!--ADATRÁCS-->
+        <!--adatracs-->
         <DataGrid x:Name="dgAdatracs" ItemsSource="{Binding}" Visibility="Hidden"/>
         <Grid x:Name="grRacs" Visibility="Hidden">
             

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telefonszamok_Alap", "Telefonszamok_Alap\Telefonszamok_Alap.csproj", "{7B2403B9-6ED1-4C33-90EF-35AA00EA2D49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telefonszamok_Alap", "Telefonszamok_Alap\Telefonszamok_Alap.csproj", "{7B2403B9-6ED1-4C33-90EF-35AA00EA2D49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
