@@ -24,9 +24,32 @@
         </Menu>
         <!--adatracs-->
         <DataGrid x:Name="dgAdatracs" ItemsSource="{Binding}" Visibility="Hidden"/>
-        <Grid x:Name="grRacs" Visibility="Hidden">
-            
+        <!--Helységadatok megjelenítése és módosítása-->
+        <Grid x:Name="grRacs" Visibility="Hidden" Margin="0,10,0,0" DataContext="{Binding}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Keresés irányítószám alapján" Grid.Row="0" Grid.Column="0"/>
+            <ComboBox x:Name="cbIrsz" ItemsSource="{Binding}" DisplayMemberPath="Irsz" Grid.Row="0" Grid.Column="1" Margin="5" SelectionChanged="cbIrsz_SelectionChanged" IsSynchronizedWithCurrentItem="True"/>
+            <Label Content="Keresés helységnév alapján" Grid.Row="1" Grid.Column="0"/>
+            <ComboBox x:Name="cbHelysegnev" ItemsSource="{Binding}" DisplayMemberPath="Nev" Grid.Row="1" Grid.Column="1" Margin="5" IsSynchronizedWithCurrentItem="True"/>
+            <Label Content="Irányítószám" Grid.Row="2" Grid.Column="0"/>
+            <TextBox x:Name="tbIrsz" Grid.Row="2" Grid.Column="1" Margin="5"/>
+            <Label Content="Helységnév" Grid.Row="3" Grid.Column="0"/>
+            <TextBox x:Name="tbHelysegnev" Grid.Row="3" Grid.Column="1" Margin="5"/>
+            <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btRogzit" Content="Módosított adatpár rögzítése" Click="btRogzit_Click" Margin="50,50,10,10"/>
+                <Button x:Name="btUjHelyseg" Content="Új helység" Margin="50,50,10,10" Click="btUjHelyseg_Click"/>
+                <Button x:Name="btVissza" Content="Vissza" Click="btVissza_Click" Margin="50,50,10,10"/>
+            </StackPanel>
         </Grid>
-        
     </StackPanel>
 </Window>
