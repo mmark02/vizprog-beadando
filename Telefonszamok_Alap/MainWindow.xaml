@@ -50,6 +50,7 @@
                 <Button x:Name="btUjHelyseg" Content="Új helység" Margin="50,50,10,10" Click="btUjHelyseg_Click"/>
                 <Button x:Name="btVissza" Content="Vissza" Click="btVissza_Click" Margin="50,50,10,10"/>
             </StackPanel>
+            
         </Grid>
     </StackPanel>
 </Window>
