@@ -90,7 +90,6 @@ public partial class MainWindow : Window
     private void cbIrsz_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         var enAktualis = ((ComboBox)sender).SelectedItem as enHelyseg;
-        cbIrsz.SelectedItem = enAktualis;
         cbHelysegnev.SelectedItem = enAktualis;
         tbIrsz.Text = enAktualis.IRSZ.ToString();
         tbHelysegnev.Text = enAktualis.Nev;

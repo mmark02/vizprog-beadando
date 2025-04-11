@@ -22,9 +22,9 @@
                 <MenuItem Header="Helységek" x:Name="miHelysegekModositas" Click="miHelysegekModositas_Click"/>
             </MenuItem>
         </Menu>
-        <!--adatracs-->
+        <!--ADATRÁCS-->
         <DataGrid x:Name="dgAdatracs" ItemsSource="{Binding}" Visibility="Hidden"/>
-        <!--Helységadatok megjelenítése és módosítása-->
+        <!--HELYSÉGADATOK MEGJELNÍTÉSE ÉS MÓDOSÍTÁSA-->
         <Grid x:Name="grRacs" Visibility="Hidden" Margin="0,10,0,0" DataContext="{Binding}">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -38,7 +38,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Content="Keresés irányítószám alapján" Grid.Row="0" Grid.Column="0"/>
-            <ComboBox x:Name="cbIrsz" ItemsSource="{Binding}" DisplayMemberPath="Irsz" Grid.Row="0" Grid.Column="1" Margin="5" SelectionChanged="cbIrsz_SelectionChanged" IsSynchronizedWithCurrentItem="True"/>
+            <ComboBox x:Name="cbIrsz" ItemsSource="{Binding}" DisplayMemberPath="IRSZ" Grid.Row="0" Grid.Column="1" Margin="5" SelectionChanged="cbIrsz_SelectionChanged" IsSynchronizedWithCurrentItem="True"/>
             <Label Content="Keresés helységnév alapján" Grid.Row="1" Grid.Column="0"/>
             <ComboBox x:Name="cbHelysegnev" ItemsSource="{Binding}" DisplayMemberPath="Nev" Grid.Row="1" Grid.Column="1" Margin="5" IsSynchronizedWithCurrentItem="True"/>
             <Label Content="Irányítószám" Grid.Row="2" Grid.Column="0"/>
@@ -50,7 +50,6 @@
                 <Button x:Name="btUjHelyseg" Content="Új helység" Margin="50,50,10,10" Click="btUjHelyseg_Click"/>
                 <Button x:Name="btVissza" Content="Vissza" Click="btVissza_Click" Margin="50,50,10,10"/>
             </StackPanel>
-            
         </Grid>
     </StackPanel>
 </Window>
