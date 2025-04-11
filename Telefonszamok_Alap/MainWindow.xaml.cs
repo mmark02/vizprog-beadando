@@ -24,14 +24,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         _context = new TelefonkonyvContext();
-        //Teszt();
-        
     }
-
-    //private void Teszt()
-    //{
-    //    MessageBox.Show(_context.enSzemelyek.First().Vezeteknev);
-    //}
 
     private void miMentes_Click(object sender, RoutedEventArgs e)
     {
