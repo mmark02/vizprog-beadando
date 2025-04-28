@@ -12,7 +12,8 @@
             <MenuItem Header="Fájl">
                 <MenuItem Header="Mentés" x:Name="miMentes" Click="miMentes_Click"/>
                 <Separator/>
-                <MenuItem Header="Kilépés" x:Name="miKilepes" Click="miKilepes_Click"/>
+                <MenuItem Header="Kijelentekzés" x:Name="miKijelentkezes" Click="miKijelentkezes_Click"/>
+                <MenuItem Header="Kilépés a programból" x:Name="miKilepes" Click="miKilepes_Click"/>
             </MenuItem>
             <MenuItem Header="Lekérdezés">
                 <MenuItem Header="Minden adat táblázatosan" x:Name="miMindenAdat" Click="miMindenAdat_Click"/>

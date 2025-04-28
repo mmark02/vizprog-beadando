@@ -119,4 +119,11 @@ public partial class MainWindow : Window
     {
         grRacs.Visibility = Visibility.Hidden;
     }
+
+    private void miKijelentkezes_Click(object sender, RoutedEventArgs e)
+    {
+        Login loginScreen = new Login();
+        loginScreen.Show();
+        this.Close();
+    }
 }
