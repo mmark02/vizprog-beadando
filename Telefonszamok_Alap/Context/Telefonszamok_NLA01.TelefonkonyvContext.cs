@@ -25,7 +25,6 @@ using Models;
 
 namespace cnTelefonkonyv
 {
-
     public partial class TelefonkonyvContext : DbContext
     {
 

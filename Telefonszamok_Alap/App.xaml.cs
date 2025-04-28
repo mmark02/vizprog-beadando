@@ -10,4 +10,3 @@ namespace Telefonszamok_Alap;
 public partial class App : Application
 {
 }
-
